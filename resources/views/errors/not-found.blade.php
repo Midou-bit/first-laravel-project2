@@ -1,12 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <title>Page non trouvée</title>
-</head>
-<body>
+@extends('layouts.app')
 
-    <h1>Page non trouvée</h1>
+@section('title', 'Page non trouvée')
 
-</body>
-</html>
+@section('content')
+    <h2>Page non trouvée</h2>
+@endsection
