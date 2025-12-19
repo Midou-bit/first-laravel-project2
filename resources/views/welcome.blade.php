@@ -8,6 +8,10 @@
     <p>Bienvenue sur le site de {{ $name }}</p>
 
     @foreach ($articles as $article)
+        @if ($loop->last)
+            @break
+        @endif
+
         <x-article 
             :title="$article['title']"
             :description="$article['description']"
