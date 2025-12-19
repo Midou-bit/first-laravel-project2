@@ -43,7 +43,8 @@ class ArticleController extends Controller
     // /articles/supprimer/{id}
     public function delete($id)
     {
-        Article::destroy($id);
+        $article = Article::findOrFail($id);
+        $article->delete();
 
         return 'Article supprimé';
     }
