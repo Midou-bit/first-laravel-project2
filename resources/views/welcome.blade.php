@@ -7,14 +7,13 @@
     
     <p>Bienvenue sur le site de {{ $name }}</p>
 
-    @foreach ($articles as $article)
-        @if ($loop->last)
-            @break
-        @endif
-
+   @foreach ($articles as $article)
+    <a href="{{ route('article.details', $article->id) }}">
         <x-article 
-            :title="$article['title']"
-            :description="$article['description']"
+            :title="$article->title"
+            :description="$article->description"
         />
-    @endforeach
+    </a>
+@endforeach
+
 @endsection
